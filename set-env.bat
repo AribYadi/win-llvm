@@ -178,6 +178,7 @@ set LLVM_CMAKE_CONFIGURE_FLAGS= ^
 	-DLLVM_INCLUDE_EXAMPLES=OFF ^
 	-DLLVM_INCLUDE_TESTS=OFF ^
 	-DLLVM_TEMPORARILY_ALLOW_OLD_TOOLCHAIN=ON ^
+	-DLLVM_ENABLE_EH=ON
 	%LLVM_CMAKE_CONFIGURE_EXTRA_FLAGS%
 
 :: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
