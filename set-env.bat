@@ -174,12 +174,10 @@ set LLVM_CMAKE_CONFIGURE_FLAGS= ^
 	-DLLVM_INCLUDE_BENCHMARKS=OFF ^
 	-DLLVM_INCLUDE_DOCS=OFF ^
 	-DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lld" ^
-	-DLLVM_ENABLE_RUNTIMES="all" ^
+	-DLLVM_ENABLE_RUNTIMES="compiler-rt;libc;libcxx;libcxxabi" ^
 	-DLLVM_INCLUDE_EXAMPLES=OFF ^
 	-DLLVM_INCLUDE_TESTS=OFF ^
 	-DLLVM_TEMPORARILY_ALLOW_OLD_TOOLCHAIN=ON ^
-	-DLLVM_ENABLE_EH=ON ^
-	-DLLVM_ENABLE_RTTI=ON ^
 	%LLVM_CMAKE_CONFIGURE_EXTRA_FLAGS%
 
 :: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
