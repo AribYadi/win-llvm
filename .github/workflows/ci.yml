@@ -36,7 +36,8 @@ jobs:
         -   name: Configure Pagefile
             uses: al-cheb/configure-pagefile-action@v1.2
             with:
-                minimum-size: 32GB
+                minimum-size: 16GB
+                disk-root: "C:"
 
         -   name: Setup MSVC
             uses: ilammy/msvc-dev-cmd@v1
