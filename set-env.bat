@@ -6,6 +6,8 @@ set TARGET_CPU=
 set TOOLCHAIN=
 set CRT=
 set CONFIGURATION=
+set CPU_CORES="%1"
+shift
 
 :loop
 
@@ -182,6 +184,7 @@ set LLVM_CMAKE_CONFIGURE_FLAGS= ^
 :: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 set CMAKE_BUILD_FLAGS= ^
+    --parallel %CPU_CORES% ^
 	--config %CONFIGURATION% ^
 	-- ^
 	/nologo ^
