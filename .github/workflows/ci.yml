@@ -33,10 +33,10 @@ jobs:
         -   name: Checkout repo
             uses: actions/checkout@v2
 
-        -   name: configure Pagefile
+        -   name: Configure Pagefile
             uses: al-cheb/configure-pagefile-action@v1.2
             with:
-                minimum-size: 8GB
+                minimum-size: 16GB
 
         -   name: Setup MSVC
             uses: ilammy/msvc-dev-cmd@v1
