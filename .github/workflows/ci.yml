@@ -48,7 +48,7 @@ jobs:
                 vsversion: 2022
 
         -   name: Set LLVM Version
-            run: echo "LLVM_VERSION=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+            run: echo "LLVM_VERSION=$GITHUB_REF_NAME" >> $GITHUB_ENV
 
         -   name: Install
             shell: cmd
@@ -62,7 +62,7 @@ jobs:
             run: |
                 call %GITHUB_WORKSPACE%\set-env.bat ${{steps.cpu-cores.outputs.count}} msvc17 ${{matrix.CRT}} ${{matrix.TARGET_CPU}} ${{matrix.CONFIGURATION}}
                 call %GITHUB_WORKSPACE%\build.bat
-                echo "DEPLOY_FILE::$DEPLOY_FILE" >> "$GITHUB_OUTPUT"
+                echo "DEPLOY_FILE::$DEPLOY_FILE" >> $GITHUB_OUTPUT
 
         -   name: Release
             uses: softprops/action-gh-release@v1
