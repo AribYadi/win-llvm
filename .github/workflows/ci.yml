@@ -65,7 +65,7 @@ jobs:
             run: |
                 call %GITHUB_WORKSPACE%\set-env.bat ${{steps.cpu-cores.outputs.count}} msvc17 ${{matrix.CRT}} ${{matrix.TARGET_CPU}} ${{matrix.CONFIGURATION}}
                 call %GITHUB_WORKSPACE%\build.bat
-                echo "DEPLOY_FILE=%DEPLOY_FILE%" >> $env:GITHUB_OUTPUT
+                echo "DEPLOY_FILE=%DEPLOY_FILE%" >> $GITHUB_OUTPUT
 
         -   name: Release
             uses: softprops/action-gh-release@v1
