@@ -151,7 +151,7 @@ set WORKING_DIR=%HOMEDRIVE%%HOMEPATH%
 set LLVM_RELEASE_TAG=llvm-%LLVM_VERSION%
 
 if "%TARGET_CPU%" == "" goto :amd64
-if "%TOOLCHAIN%" == "" goto :msvc17
+if "%TOOLCHAIN%" == "" goto :msvc18
 if "%CRT%" == "" goto :libcmt
 if "%CONFIGURATION%" == "" goto :release
 
