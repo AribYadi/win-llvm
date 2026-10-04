@@ -10,7 +10,7 @@ powershell "Invoke-WebRequest -Uri %LLVM_DOWNLOAD_URL% -OutFile %WORKING_DIR%\%L
 move %WORKING_DIR%\llvm-project-%LLVM_VERSION%.src %WORKING_DIR%\llvm-project
 dir %WORKING_DIR%
 
-if "%CONFIGURATION%" == "Debug" goto dbg
+if "%DEBUG_SUFFIX%" == "-dbg" goto dbg
 goto :eof
 
 :: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
